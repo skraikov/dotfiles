@@ -1,0 +1,28 @@
+!# ================================================================
+!# clear modifiers
+clear Shift
+clear Lock
+clear Control
+clear Mod1
+clear Mod2
+clear Mod3
+clear Mod4
+clear Mod5
+
+!# ================================================================
+!# map CapsLock to Hyper_L
+keycode 66 =	Hyper_L
+
+!# map Menu key to Super_R
+keycode 135 =	Super_R
+
+!# ================================================================
+!# add modifiers
+add shift   = Shift_L Shift_R
+add lock    = Caps_Lock
+add control = Control_L Control_R
+add mod1    = Meta_L Meta_R
+add mod2    = Mode_switch
+add mod3    = Num_Lock
+add mod4    = Super_L Super_R
+add mod5    = Hyper_L Hyper_R

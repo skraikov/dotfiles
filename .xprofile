@@ -1,0 +1,41 @@
+xset +fp /usr/share/fonts/local
+xset fp rehash
+
+# tune keyboard speed repeating after 240 ms, 38 cps
+xset r rate 240 38
+
+# merge user X resources
+xrdb -merge ~/.config/xserver/xdefaults
+
+# russian keyboard
+setxkbmap -layout "us,ru(winkeys)" -option "grp:shift_toggle,grp_led:scroll"
+
+# apply customized xmodmap
+if [ -f ~/.config/xserver/xmodmap ]; then
+	/usr/bin/xmodmap ~/.config/xserver/xmodmap
+fi
+
+# turn off screen blank
+#xset -dpms &
+xset s off &
+
+# turn off annoyng speaker beeps
+xset b off
+
+# D-Bus
+#eval `dbus-launch --sh-syntax --exit-with-session`
+
+parcellite &
+
+urxvtd -q -f -o &
+
+# run dropbox if installed
+if hash dropbox 2>/dev/null; then
+	dropbox &
+fi
+
+autocutsel -f &
+
+if hash cbatticon 2>/dev/null; then
+   cbatticon &
+fi
