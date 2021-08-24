@@ -1,0 +1,14 @@
+# Backup and temporary files #
+*~
+*.bak
+*.dproj.local
+*.identcache
+
+# OS generated files #
+Thumbs.db
+
+# virtualenv #
+venv/
+
+# vagrant #
+.vagrant

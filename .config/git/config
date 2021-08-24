@@ -1,0 +1,62 @@
+[user]
+	name = Serge Kraikov
+	email = serge.kraikov@gmail.com
+
+[core]
+	excludesfile = ~/.config/git/gitignore.global
+	autocrlf = false
+	safecrlf = true
+	filemode = true
+
+[credential]
+	helper = store --file ~.cache/git/git-credentials
+
+[alias]
+	s = status
+	ci = commit
+	co = checkout
+	b = branch
+	d = diff
+	dt = difftool --tool=arax --no-prompt
+	mt = mergetool --tool=arax --no-prompt
+	a = add
+	l = log --pretty=format:'%C(blue bold)%h%C(reset): %Cgreen%s%Creset' --graph --stat
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+[difftool "arax"]
+	cmd = '/cygdrive/c/Program Files/Araxis/Araxis Merge/Compare.exe' /2 /wait `cygpath -w $LOCAL` `cygpath -w $REMOTE`
+
+[mergetool "arax"]
+	cmd = '/cygdrive/c/Program Files/Araxis/Araxis Merge/Compare.exe' /3 /a2 /merge /wait `cygpath -w $REMOTE` `cygpath -w $BASE` `cygpath -w $LOCAL` `cygpath -w $MERGED`
+
+[difftool "sourcetree"]
+	cmd = 'C:/Program Files/KDiff3/kdiff3.exe' \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "sourcetree"]
+	cmd = 'C:/Program Files/KDiff3/kdiff3.exe' \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+
+[color]
+	ui = true
+
+[color "branch"]
+	current = green reverse
+	local = green
+	remote = magenta
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red
+	new = green
+
+[color "status"]
+	added = green
+	changed = magenta
+	untracked = cyan
+
+[push]
+	default = simple
+
+[log]
+	date = iso8601
