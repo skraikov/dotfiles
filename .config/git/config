@@ -9,7 +9,7 @@
 	filemode = true
 
 [credential]
-	helper = store --file ~.cache/git/git-credentials
+	helper = store --file ~/.cache/git/git-credentials
 
 [alias]
 	s = status
