@@ -1,0 +1,8 @@
+# Write your default config options here!
+speed=2.14
+af=scaletempo
+cache=65536
+vo=xv
+softvol=yes
+softvol-max=400
+lavdopts=threads=4
