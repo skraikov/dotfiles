@@ -50,7 +50,14 @@ editor = "emacs"
 editor_cmd = editor
 browser = "/usr/bin/firefox"
 
-hostname = os.getenv("HOST") or awful.util.pread("hostname")
+function getHostname()
+    local f = io.popen ("/bin/hostname")
+    local hostname = f:read("*a") or ""
+    f:close()
+    hostname =string.gsub(hostname, "\n$", "")
+    return hostname
+end
+hostname = getHostname()
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
