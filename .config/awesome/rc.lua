@@ -57,7 +57,7 @@ hostname = os.getenv("HOST") or awful.util.pread("hostname")
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-if hostname.find("-virt") then
+if string.find(hostname, "-virt") then
     modkey = "Mod4"
 else
     modkey = "Mod5"
