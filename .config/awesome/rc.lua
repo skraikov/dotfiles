@@ -50,7 +50,7 @@ editor = "emacs"
 editor_cmd = editor
 browser = "/usr/bin/firefox"
 
-hostname = os.getenv("HOST")
+hostname = os.getenv("HOST") or awful.util.pread("hostname")
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
