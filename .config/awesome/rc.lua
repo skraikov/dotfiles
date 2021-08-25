@@ -50,12 +50,18 @@ editor = "emacs"
 editor_cmd = editor
 browser = "/usr/bin/firefox"
 
+hostname = os.getenv("HOST")
+
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
 -- If you do not like this or do not have such a key,
 -- I suggest you to remap Mod4 to another key using xmodmap or other tools.
 -- However, you can use another modifier like Mod1, but it may interact with others.
-modkey = "Mod5"
+if hostname.find("-virt") then
+    modkey = "Mod4"
+else
+    modkey = "Mod5"
+end
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
