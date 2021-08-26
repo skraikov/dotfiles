@@ -176,6 +176,228 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
+color-schemes:
+  # urxvt-zenburn
+  urxvt-zenburn: &urxvt-zenburn
+    # Default colors
+    primary:
+      background: '#181818'
+      foreground: '#dcdccc'
+    # Normal colors
+    normal:
+      black:   '#1E2320'
+      red:     '#705050'
+      green:   '#60b48a'
+      yellow:  '#dfaf8f'
+      blue:    '#506070'
+      magenta: '#dc8cc3'
+      cyan:    '#8cd0d3'
+      white:   '#dcdccc'
+    # Bright colors
+    bright:
+      black:   '#709080'
+      red:     '#dca3a3'
+      green:   '#c3bf9f'
+      yellow:  '#f0dfaf'
+      blue:    '#94bff3'
+      magenta: '#ec93d3'
+      cyan:    '#93e0e3'
+      white:   '#ffffff'
+
+  # Visual Studio Code Terminal
+  vs-code-term: &vs-code-term
+    # Default colors
+    primary:
+      background: '#1e1e1e' #Background from Dark Theme
+      foreground: '#cccccc'
+    # Selection colors
+    selection:
+      text: CellForeground
+      background: '#565656'
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#cd3131'
+      green:   '#0dbc79'
+      yellow:  '#e5e510'
+      blue:    '#2472c8'
+      magenta: '#bc3fbc'
+      cyan:    '#11a8cd'
+      white:   '#e5e5e5'
+    # Bright colors
+    bright:
+      black:   '#666666'
+      red:     '#f14c4c'
+      green:   '#23d18b'
+      yellow:  '#f5f543'
+      blue:    '#3b8eea'
+      magenta: '#d670d6'
+      cyan:    '#29b8db'
+      white:   '#ffffff'
+
+  # ubuntu
+  ubuntu: &ubuntu
+    # Default colors
+    primary:
+      #background: '#300a24'
+      foreground: '#eeeeec'
+    # Normal colors
+    normal:
+      black:   '#2e3436'
+      red:     '#cc0000'
+      green:   '#4e9a06'
+      yellow:  '#c4a000'
+      blue:    '#3465a4'
+      magenta: '#75507b'
+      cyan:    '#06989a'
+      white:   '#d3d7cf'
+    # Bright colors
+    bright:
+      black:   '#555753'
+      red:     '#ef2929'
+      green:   '#8ae234'
+      yellow:  '#fce94f'
+      blue:    '#729fcf'
+      magenta: '#ad7fa8'
+      cyan:    '#34e2e2'
+      white:   '#eeeeec'
+
+  # Terminal.app
+  terminal-app: &terminal-app
+    # Default colors
+    primary:
+      background: '#000000'
+      foreground: '#b6b6b6'
+
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#990000'
+      green:   '#00a600'
+      yellow:  '#999900'
+      blue:    '#0000b2'
+      magenta: '#b200b2'
+      cyan:    '#00a6b2'
+      white:   '#bfbfbf'
+
+    # Bright colors
+    bright:
+      black:   '#666666'
+      red:     '#e50000'
+      green:   '#00d900'
+      yellow:  '#e5e500'
+      blue:    '#0000ff'
+      magenta: '#e500e5'
+      cyan:    '#00e5e5'
+      white:   '#e5e5e5'
+
+  # Tango
+  tango: &tango
+    # primary:
+    #   background: '#000000'
+    #   foreground: '#00ff00'
+    # Normal colors
+    normal:
+        black:   '#2e3436'
+        red:     '#cc0000'
+        green:   '#73d216'
+        yellow:  '#edd400'
+        blue:    '#3465a4'
+        magenta: '#75507b'
+        cyan:    '#06989a'
+        white:   '#d3d7cf'
+    # Bright colors
+    bright:
+        black:   '#2e3436'
+        red:     '#ef2929'
+        green:   '#8ae234'
+        yellow:  '#fce94f'
+        blue:    '#729fcf'
+        magenta: '#ad7fa8'
+        cyan:    '#34e2e2'
+        white:   '#eeeeee'
+
+  # Pop!_OS
+  pop-os: &pop-os
+    # Default colors
+    primary:
+      background: '#333333'
+      foreground: '#F2F2F2'
+    # Normal colors
+    normal:
+      black:   '#333333'
+      red:     '#CC0000'
+      green:   '#4E9A06'
+      yellow:  '#C4A000'
+      blue:    '#3465A4'
+      magenta: '#75507B'
+      cyan:    '#06989A'
+      white:   '#D3D7CF'
+    # Bright colors
+    bright:
+      black:   '#88807C'
+      red:     '#F15D22'
+      green:   '#73C48F'
+      yellow:  '#FFCE51'
+      blue:    '#48B9C7'
+      magenta: '#AD7FA8'
+      cyan:    '#34E2E2'
+      white:   '#ffffff'
+
+  # Kitty
+  kitty: &kitty
+    # Default colors
+    primary:
+      background: '#000000'
+      foreground: '#dddddd'
+    # Normal colors
+    normal:
+      black:   '#000000'
+      red:     '#cc0403'
+      green:   '#19cb00'
+      yellow:  '#cecb00'
+      blue:    '#0d73cc'
+      magenta: '#cb1ed1'
+      cyan:    '#0dcdcd'
+      white:   '#dddddd'
+    # Bright colors
+    bright:
+      black:   '#767676'
+      red:     '#f2201f'
+      green:   '#23fd00'
+      yellow:  '#fffd00'
+      blue:    '#1a8fff'
+      magenta: '#fd28ff'
+      cyan:    '#14ffff'
+      white:   '#ffffff'
+
+  # The 'GNOME Dark" theme from GNOME terminal.
+  gnome-dark: &gnome-dark
+    primary:
+      foreground: '#d0cfcc'
+      background: '#171421'
+      bright_foreground: '#ffffff'
+    normal:
+      black:   '#171421'
+      red:     '#c01c28'
+      green:   '#26a269'
+      yellow:  '#a2734c'
+      blue:    '#12488b'
+      magenta: '#a347ba'
+      cyan:    '#2aa1b3'
+      white:   '#d0cfcc'
+    bright:
+      black:   '#5e5c64'
+      red:     '#f66151'
+      green:   '#33d17a'
+      yellow:  '#e9ad0c'
+      blue:    '#2a7bde'
+      magenta: '#c061cb'
+      cyan:    '#33c7de'
+      white:   '#ffffff'
+
+colors: *gnome-dark
+
 # Colors (Tomorrow Night)
 #colors:
   # Default colors
