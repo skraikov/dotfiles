@@ -29,7 +29,7 @@ ZSH_THEME="sorin"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git ant archlinux lein mercurial history-substring-search)
+plugins=(git archlinux history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -39,7 +39,11 @@ source $ZSH/oh-my-zsh.sh
 source /etc/profile
 source $HOME/.profile
 
-PATH=$HOME/.local/bin:$HOME/.dotnet/tools:"${PATH}"
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+[[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
+[[ -d "$HOME/.dotnet/tools" ]] && PATH="$HOME/.dotnet/tools:${PATH}"
 
 
 # ---[ System settings ]------------------------------------------------
@@ -50,16 +54,11 @@ umask 0027
 # ---[ ZSH aliases ]----------------------------------------------------
 # useful aliases
 # ls
-alias l="exa --color=auto"
-alias la="exa -a --color=auto"
-alias ll="exa -l --color=auto"
-alias lla="exa -la --color=auto"
-
-# Midnight Commander
-alias m="mc"
-
-#emacs
-alias e="emacs"
+alias ls="exa -l --color=auto --group-directories-first" # my preferred listing
+alias la="exa -la --color=auto --group-directories-first" # all files and dirs
+alias ll="exa -l --color=auto --group-directories-first" # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -al | egrep "^\."'
 
 # archlinux
 alias pacls="pacman -Ql"
@@ -75,9 +74,6 @@ alias v="vagrant"
 # docker
 alias d="docker"
 alias dc="docker-compose"
-
-# python virtualenv
-alias sv="source venv/bin/activate"
 
 # dotfiles
 alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
