@@ -58,7 +58,6 @@ alias ls="exa -l --color=auto --group-directories-first" # my preferred listing
 alias la="exa -la --color=auto --group-directories-first" # all files and dirs
 alias ll="exa -l --color=auto --group-directories-first" # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
-alias l.='exa -al | egrep "^\."'
 
 # archlinux
 alias pacls="pacman -Ql"
