@@ -5,7 +5,7 @@ ZSH=$HOME/.config/zsh/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="sorin"
+#ZSH_THEME="sorin"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -54,10 +54,12 @@ umask 0027
 # ---[ ZSH aliases ]----------------------------------------------------
 # useful aliases
 # ls
-alias ls="exa -l --color=auto --group-directories-first" # my preferred listing
-alias la="exa -la --color=auto --group-directories-first" # all files and dirs
+alias l="exa -l --color=auto --group-directories-first" # my preferred listing
+alias ls="exa -l --color=auto --group-directories-first" # same as l
+alias la="exa -la --color=auto --group-directories-first" # all files/dirs
 alias ll="exa -l --color=auto --group-directories-first" # long format
 alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.="exa -ld --color=auto --group-directories-first .*" # show dotfiles/dotdirs only
 
 # archlinux
 alias pacls="pacman -Ql"
@@ -89,8 +91,8 @@ setopt CHECK_JOBS NO_HUP NOTIFY LONG_LIST_JOBS AUTO_RESUME
 setopt INC_APPEND_HISTORY EXTENDED_HISTORY HIST_IGNORE_ALL_DUPS HIST_FIND_NO_DUPS
 setopt HIST_REDUCE_BLANKS
 HISTFILE=~/.histfile
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=25000
+SAVEHIST=25000
 
 # dirs history
 DIRSTACKSIZE=20
@@ -104,3 +106,6 @@ setopt GLOB_DOTS REC_EXACT EXTENDED_GLOB AUTO_PARAM_SLASH
 #[ -n "$PS1" ] && \
 #    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
 #        eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+### SETTING THE STARSHIP PROMPT ###
+eval "$(starship init zsh)"
