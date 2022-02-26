@@ -105,7 +105,7 @@ env:
 # Font configuration
 font:
   # Normal (roman) font face
-  #normal:
+  normal:
     # Font family
     #
     # Default:
@@ -113,6 +113,13 @@ font:
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
     #family: monospace
+    #family: Anonymous Pro
+    #family: Jetbrains Mono
+    #family: Cascadia Code
+    #family: Fira Code
+    #family: Inconsolata
+    #family: Monoid
+    family: Hack
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
