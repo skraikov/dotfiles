@@ -8,7 +8,7 @@ xset r rate 240 38
 xrdb -merge ~/.config/xserver/xdefaults
 
 # russian keyboard
-setxkbmap -layout "us,ru(winkeys)" -option "grp:shift_toggle,grp_led:scroll"
+setxkbmap -layout "us,ru(winkeys)" -option "grp:shifts_toggle,grp_led:scroll"
 
 # apply customized xmodmap
 if [ -f ~/.config/xserver/xmodmap ]; then
