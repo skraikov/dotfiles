@@ -1,8 +1,11 @@
+#!/bin/env python
+
+import string
 import sys
 import os.path
 import shutil
 import glob
-import pyexiv2
+import piexif
 import datetime
 
 LIB_DIR = os.path.expanduser(sys.argv[1] if len(sys.argv) > 1 else "~/Sync/Photo")
@@ -13,21 +16,30 @@ for file in FILES:
         continue
     try:
         file_basename = os.path.basename(file)
-        print(file, end = ": ")
-        metadata = pyexiv2.ImageMetadata(file)
-        metadata.read()
-        d = None
-        if 'Exif.Image.DateTime' in set(metadata.exif_keys):
-            d = metadata['Exif.Image.DateTime']
-        elif 'Iptc.Application2.DateCreated' in set(metadata.iptc_keys):
-            d = metadata['Iptc.Application2.DateCreated']
-        elif 'Xmp.xmp.ModifyDate' in set(metadata.xmp_keys):
-            d = metadata['Xmp.xmp.ModifyDate']
+        print(file, end =  ": ")
+        exif_dict = piexif.load(file)
+        exif0 = exif_dict.pop("0th")
+        exif = exif_dict.pop("Exif")
+        exifGps = exif_dict.pop("GPS")
+        if exif0 is not None and piexif.ImageIFD.DateTime in exif0:
+            d = exif0[piexif.ImageIFD.DateTime]
+        elif exif is not None and piexif.ExifIFD.DateTimeOriginal in exif:
+            d = exif[piexif.ExifIFD.DateTimeOriginal]
+        elif exifGps is not None and piexif.GPSIFD.GPSDateStamp in exifGps:
+            d = exifGps[piexif.GPSIFD.GPSDateStamp]
+        else:
+            d = None
 
-        if d != None and isinstance(d.value, datetime.datetime):
-            date_dir = d.value.strftime("%Y-%m-%d")
-            month_dir = d.value.strftime("%Y-%m")
-            year_dir = d.value.strftime("%Y")
+        if isinstance(d, bytes):
+            d = d.decode("utf-8")
+
+        if isinstance(d, str):
+            d = datetime.datetime.strptime(d, "%Y:%m:%d %H:%M:%S")
+
+        if d is not None and isinstance(d, datetime.datetime):
+            date_dir = d.strftime("%Y-%m-%d")
+            month_dir = d.strftime("%Y-%m")
+            year_dir = d.strftime("%Y")
             path = os.path.join(LIB_DIR, year_dir, month_dir, date_dir)
             print(' -> ' + date_dir + '/')
             os.makedirs(path, exist_ok=True)
