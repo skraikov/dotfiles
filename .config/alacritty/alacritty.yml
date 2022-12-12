@@ -119,6 +119,7 @@ font:
     #family: Fira Code
     #family: Inconsolata
     #family: Monoid
+    #family: "Noto Sans Mono"
     family: Hack
 
     # The `style` can be specified to pick a specific face.
