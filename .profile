@@ -19,7 +19,12 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export SSH_AUTH_SOCK=$XDG_RUNTIME_DIR/gnupg/S.gpg-agent.ssh
 
 # java
+# for java 8
 export _JAVA_AWT_WM_NONREPARENTING=1
+# for java 9+
+export AWT_TOOLKIT=MToolkit
+# better fonts, look-and-feel, use opengl
+export JDK_JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on -Dswing.aatext=true -Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dsun.java2d.opengl=true'
 
 # mplayer
 export MPLAYER_HOME=$XDG_CONFIG_HOME/mplayer
