@@ -6,3 +6,4 @@ vo=xv
 softvol=yes
 softvol-max=400
 lavdopts=threads=4
+utf8=yes
