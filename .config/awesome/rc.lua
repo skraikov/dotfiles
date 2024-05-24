@@ -363,9 +363,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey }, "p",
         function() awful.spawn("sh -c 'rofi -show drun'") end,
         {description = "show the menubar", group = "launcher"}),
+
     -- gopass
     awful.key({ modkey, "Shift" }, "p",
         function() awful.spawn("sh -c ~/.local/bin/enter-password.sh") end,
+        {description = "enter password from menu", group = "pass"}),
+    awful.key({ modkey, "Shift", "Control" }, "p",
+        function() awful.spawn("sh -c ~/.local/bin/enter-password-otp.sh") end,
         {description = "enter password from menu", group = "pass"})
 )
 
