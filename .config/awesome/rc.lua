@@ -360,8 +360,13 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"})
+    awful.key({ modkey }, "p",
+        function() awful.spawn("sh -c 'rofi -show drun'") end,
+        {description = "show the menubar", group = "launcher"}),
+    -- gopass
+    awful.key({ modkey, "Shift" }, "p",
+        function() awful.spawn("sh -c ~/.local/bin/enter-password.sh") end,
+        {description = "enter password from menu", group = "pass"})
 )
 
 clientkeys = gears.table.join(
