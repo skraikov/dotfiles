@@ -360,7 +360,7 @@ globalkeys = gears.table.join(
               end,
               {description = "lua execute prompt", group = "awesome"}),
     -- Menubar
-    awful.key({ modkey }, "m",
+    awful.key({ modkey }, ".",
         function() awful.spawn("sh -c 'rofi -show drun'") end,
         {description = "show the menubar", group = "launcher"}),
 
