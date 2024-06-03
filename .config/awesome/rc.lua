@@ -370,7 +370,12 @@ globalkeys = gears.table.join(
         {description = "enter password from menu", group = "pass"}),
     awful.key({ modkey, "Shift" }, "p",
         function() awful.spawn("sh -c ~/.local/bin/enter-password-otp.sh") end,
-        {description = "enter otp password from menu", group = "pass"})
+        {description = "enter otp password from menu", group = "pass"}),
+
+    -- run vagrant vm without shell
+    awful.key({ modkey, }, "m",
+        function() awful.spawn("sh -c ~/.local/bin/run-vm.sh") end,
+        {description = "run vagrant VM from menu", group = "virt"})
 )
 
 clientkeys = gears.table.join(
