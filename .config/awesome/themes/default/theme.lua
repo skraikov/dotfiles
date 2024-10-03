@@ -6,10 +6,10 @@ theme = {}
 
 theme.font          = "terminus 8"
 
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
+theme.bg_normal     = "#222222bb"
+theme.bg_focus      = "#535d6cbb"
+theme.bg_urgent     = "#ff0000bb"
+theme.bg_minimize   = "#444444bb"
 
 theme.fg_normal     = "#aaaaaa"
 theme.fg_focus      = "#ffffff"
