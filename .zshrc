@@ -79,6 +79,11 @@ alias dc="docker-compose"
 # dotfiles
 alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
+#yt-dlp without proxy
+alias yt="yt-dlp -c -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=1280]+ba'"
+#yt-dlp with proxy
+alias ytp="yt-dlp -c --proxy 'socks5://127.0.0.1:1248' -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=1280]+ba'"
+
 # ---[ ZSH Options ]----------------------------------------------------
 # General
 setopt ALWAYS_TO_END BASH_AUTO_LIST NO_BEEP CLOBBER AUTO_CD MULTIOS
