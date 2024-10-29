@@ -36,6 +36,7 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 # ---[ Load default shell profile ]-------------------------------------
+setopt nullglob
 source /etc/profile
 source $HOME/.profile
 
