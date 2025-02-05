@@ -22,4 +22,5 @@ gopass ls --flat | rofi -dmenu | xargs --no-run-if-empty gopass show -o | \
     sed 's/[(]/parenleft/g' | \
     sed 's/[)]/parenright/g' | \
     sed 's/[&]/ampersand/g' | \
+    sed 's/[|]/bar/g' | \
     xargs --no-run-if-empty xdotool key
