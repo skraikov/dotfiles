@@ -84,7 +84,9 @@ alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias yt="yt-dlp -c -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=1280]+ba'"
 #yt-dlp with proxy
 alias ytp="yt-dlp -c --proxy 'socks5://127.0.0.1:1248' -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=1280]+ba'"
+alias ytpd="yt-dlp -c --proxy 'socks5://127.0.0.1:1248' -o \"`date +%y-%m-%dT%H-%M-%S` - %(title)s.%(ext)s\" -f 'bv*[width>=1280]+ba'"
 alias ytps="yt-dlp -c --proxy 'socks5://127.0.0.1:1248' -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=1280]+ba' --write-auto-subs --sub-lang en"
+alias ytpsd="yt-dlp -c --proxy 'socks5://127.0.0.1:1248' -o \"`date +%y-%m-%dT%H-%M-%S` - %(title)s.%(ext)s\" -f 'bv*[width>=1280]+ba' --write-auto-subs --sub-lang en"
 
 # ---[ ZSH Options ]----------------------------------------------------
 # General
