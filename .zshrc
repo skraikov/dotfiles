@@ -88,6 +88,10 @@ alias ytp="yt-dlp -c --proxy 'socks5://127.0.0.1:12334' -o '%(playlist_index)03d
 alias ytpd="yt-dlp -c --proxy 'socks5://127.0.0.1:12334' -o \"`date +%y-%m-%d` - %(title)s.%(ext)s\" -f 'bv*[width>=1280]+ba' --cookies-from-browser firefox"
 alias ytps="yt-dlp -c --proxy 'socks5://127.0.0.1:12334' -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=1280]+ba' --write-auto-subs --sub-lang en --cookies-from-browser firefox"
 alias ytpsd="yt-dlp -c --proxy 'socks5://127.0.0.1:12334' -o \"`date +%y-%m-%d` - %(title)s.%(ext)s\" -f 'bv*[width>=1280]+ba' --write-auto-subs --sub-lang en --cookies-from-browser firefox"
+alias ytp7="yt-dlp -c --proxy 'socks5://127.0.0.1:12334' -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=720]+ba' --cookies-from-browser firefox"
+alias ytpd7="yt-dlp -c --proxy 'socks5://127.0.0.1:12334' -o \"`date +%y-%m-%d` - %(title)s.%(ext)s\" -f 'bv*[width>=720]+ba' --cookies-from-browser firefox"
+alias ytps7="yt-dlp -c --proxy 'socks5://127.0.0.1:12334' -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=720]+ba' --write-auto-subs --sub-lang en --cookies-from-browser firefox"
+alias ytpsd7="yt-dlp -c --proxy 'socks5://127.0.0.1:12334' -o \"`date +%y-%m-%d` - %(title)s.%(ext)s\" -f 'bv*[width>=720]+ba' --write-auto-subs --sub-lang en --cookies-from-browser firefox"
 
 # ---[ ZSH Options ]----------------------------------------------------
 # General
