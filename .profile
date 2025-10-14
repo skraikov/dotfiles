@@ -38,3 +38,6 @@ export GOPATH=$XDG_CACHE_HOME/go
 
 # docker
 export DOCKER_BUILDKIT=1
+
+# qemu
+export SPICE_NOGRAB=1
