@@ -78,7 +78,7 @@ alias d="docker"
 alias dc="docker-compose"
 
 # dotfiles
-alias df="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
 #yt-dlp without proxy
 alias yt="yt-dlp -c -o '%(playlist_index)03d - %(title)s.%(ext)s' -f 'bv*[width>=1280]+ba' --cookies-from-browser firefox"
