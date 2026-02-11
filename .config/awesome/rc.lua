@@ -40,7 +40,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("/home/serge/.config/awesome/themes/default/theme.lua")
+beautiful.init("/home/skraikov/.config/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 -- terminal = "xterm"
@@ -331,7 +331,7 @@ globalkeys = gears.table.join(
        {description = "un/mute volume", group = "sound"}),
     -- yandex radio control
     awful.key({                   }, "XF86AudioPlay",
-       function () awful.spawn("/home/serge/.local/bin/radio.yandex.ru-client playpause") end,
+       function () awful.spawn("/home/skraikov/.local/bin/radio.yandex.ru-client playpause") end,
        {description = "play/pause yandex radio", group = "sound"}),
 
     awful.key({ modkey, "Control" }, "n",
