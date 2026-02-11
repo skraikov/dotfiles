@@ -1,0 +1,15 @@
+[core]
+	exportkeys = true
+	nopager = false
+	notifications = true
+	cliptimeout = 45
+	autoimport = false
+	parsing = true
+[mounts]
+	path = /home/skraikov/.local/share/gopass/stores/root
+[age]
+	usekeychain = false
+[show]
+	safecontent = false
+[generate]
+	autoclip = false
