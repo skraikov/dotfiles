@@ -66,6 +66,8 @@ alias l.="exa -ld --color=auto --group-directories-first .*" # show dotfiles/dot
 alias pacls="pacman -Ql"
 alias paclean="sudo pacman -Sc"
 
+# git
+alias lg="lazygit"
 
 # vagrant
 alias v="vagrant"
@@ -73,6 +75,7 @@ alias v="vagrant"
 # docker
 alias d="docker"
 alias dc="docker-compose"
+alias ld="lazydocker"
 
 # dotfiles
 alias dotfiles="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
