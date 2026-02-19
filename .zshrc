@@ -66,9 +66,6 @@ alias l.="exa -ld --color=auto --group-directories-first .*" # show dotfiles/dot
 alias pacls="pacman -Ql"
 alias paclean="sudo pacman -Sc"
 
-# VirtualBox
-alias vm="VBoxManage -q startvm"
-alias vmls="VBoxManage -q list vms"
 
 # vagrant
 alias v="vagrant"
