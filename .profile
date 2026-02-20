@@ -8,8 +8,8 @@ export XDG_CACHE_HOME=~/.cache
 # XDG_RUNTIME_DIR already set by systemd
 
 # user preferences
-export EDITOR='emacsclient -t'
-export VISUAL='emacsclient -c'
+export EDITOR='nvim'
+export VISUAL='neovide'
 export PAGER=most
 
 ### "bat" as manpager

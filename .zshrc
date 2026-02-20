@@ -43,9 +43,9 @@ source $HOME/.profile
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-[[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
 [[ -d "$HOME/.dotnet/tools" ]] && PATH="$HOME/.dotnet/tools:${PATH}"
-
+[[ -d "$HOME/.local/share/omarhy/bin" ]] && PATH="$HOME/.local/share/omarhy/bin:${PATH}"
+[[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
 
 # ---[ System settings ]------------------------------------------------
 limit -s coredumpsize 0
