@@ -366,10 +366,10 @@ globalkeys = gears.table.join(
 
     -- gopass
     awful.key({ modkey, }, "p",
-        function() awful.spawn("sh -c ~/.local/bin/enter-password.sh") end,
+        function() awful.spawn("sh -c ~/.local/bin/enter-password-rofi.sh") end,
         {description = "enter password from menu", group = "pass"}),
     awful.key({ modkey, "Shift" }, "p",
-        function() awful.spawn("sh -c ~/.local/bin/enter-password-otp.sh") end,
+        function() awful.spawn("sh -c ~/.local/bin/enter-password-rofi-otp.sh") end,
         {description = "enter otp password from menu", group = "pass"}),
 
     -- run vagrant vm without shell
