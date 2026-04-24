@@ -1,0 +1,33 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ollama/dolphin3:latest",
+  "provider": {
+    "ollama": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama",
+      "options": {
+        "baseURL": "http://127.0.0.1:11434/v1"
+      },
+      "models": {
+        "qwen3.5:35b": {
+          "name": "qwen3.5:35b",
+          "reasoning": true,
+          "tools": true
+        },
+        "qwen3-coder:30b": {
+          "name": "qwen3-coder:30b",
+          "reasoning": true,
+          "tools": true
+        }
+      }
+    }
+  },
+  "autoupdate": false,
+  "plugin": ["superpowers@git+https://github.com/obra/superpowers.git"],
+  "permission": {
+    "bash": "ask",
+    "edit": "ask",
+    "patch": "ask"
+  }
+}
+
