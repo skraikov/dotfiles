@@ -365,10 +365,10 @@ globalkeys = gears.table.join(
         {description = "show the menubar", group = "launcher"}),
 
     -- gopass
-    awful.key({ modkey, }, "p",
+    awful.key({ modkey, }, "/",
         function() awful.spawn("sh -c ~/.local/bin/enter-password-rofi.sh") end,
         {description = "enter password from menu", group = "pass"}),
-    awful.key({ modkey, "Shift" }, "p",
+    awful.key({ modkey, "Shift" }, "/",
         function() awful.spawn("sh -c ~/.local/bin/enter-password-rofi-otp.sh") end,
         {description = "enter otp password from menu", group = "pass"}),
 
@@ -385,7 +385,7 @@ clientkeys = gears.table.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    awful.key({ modkey,           }, "q",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),
