@@ -1,6 +1,6 @@
-[submodule "config/.config/zsh/oh-my-zsh"]
-	path = config/.config/zsh/oh-my-zsh
+[submodule "shell/.config/zsh/oh-my-zsh"]
+	path = shell/.config/zsh/oh-my-zsh
 	url = https://github.com/ohmyzsh/ohmyzsh.git
-[submodule "config/.local/share/omarchy"]
-	path = config/.local/share/omarchy
-	url = https://github.com/basecamp/omarchy
+[submodule "omarchy/.local/share/omarchy"]
+	path = omarchy/.local/share/omarchy
+	url = https://github.com/basecamp/omarchy.git
